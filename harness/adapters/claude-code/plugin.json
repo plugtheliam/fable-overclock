@@ -1,0 +1,10 @@
+{
+  "name": "fable-overclock",
+  "version": "0.2.0",
+  "description": "A per-model reliability harness for Claude Code. Makes the model you run (Opus/Sonnet/DeepSeek) source its claims, abstain instead of inventing, and cross-verify with a second model. stdlib-only, non-blocking.",
+  "author": "plugtheliam",
+  "license": "MIT",
+  "homepage": "https://github.com/plugtheliam/fable-overclock",
+  "skills": ["skill/myinc-harness"],
+  "hooks": "adapters/claude-code/settings.snippet.json"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sonnet",
+  "model": "claude-sonnet-4-6",
+  "role": "cost-default generator — fast and cheap, holds near-parity with Opus on judged work",
+  "compensates_weakness": "skips verification; overflows context on long tasks",
+  "gate": { "strictness": "strict" },
+  "dials": {
+    "scope": "produce exactly the asked shape; delete out-of-scope output",
+    "evidence": "cite the source for every figure; if a number isn't in the source, say UNKNOWN",
+    "verify": "two-pass self-review; escalate to Opus on deep multi-domain / pure-reasoning calls",
+    "thinking": "difficulty-proportional"
+  }
+}

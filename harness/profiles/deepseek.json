@@ -1,0 +1,18 @@
+{
+  "name": "deepseek",
+  "model_flash": "deepseek/deepseek-v4-flash",
+  "model_pro": "deepseek/deepseek-v4-pro",
+  "role": "cheapest model — strongest scaffolding, then cross-verified by Opus",
+  "compensates_weakness": "hallucination on unknowns; tool-use inefficiency; long-horizon drift",
+  "access": { "default": "openrouter", "base_url": "https://openrouter.ai/api/v1",
+              "api_key_env": "OPENROUTER_API_KEY", "option_local": "Ollama/vLLM via MYINC_BASE_URL" },
+  "gate": { "strictness": "strictest" },
+  "dials": {
+    "scope": "single-concern steps; re-read the requirements before each",
+    "abstain": "if a fact/number isn't confirmed by the source, output UNKNOWN — never invent it",
+    "evidence": "cite the source for every figure"
+  },
+  "verify": { "by": "opus", "model": "anthropic/claude-opus-4-8",
+              "why": "borrow a low-hallucination model to catch what a cheap one invents",
+              "backend": "auto (claude-cli when present, else openrouter)" }
+}

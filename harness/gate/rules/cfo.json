@@ -1,0 +1,32 @@
+{
+  "role": "cfo",
+  "source": "examples/cfo-pack/ (domain pack on reliability.json)",
+  "philosophy": "Tripwires, not verdicts. The gate flags; the agent reasons and returns a verdict.",
+  "tripwires": [
+    {
+      "id": "spend-runway",
+      "fires_on": "Any spend / financial commitment present in a deliverable",
+      "requires": "A valid reasoned verdict block: VERDICT: refuse|conditional|escalate + FLIPS IF:",
+      "severity": "block-all-profiles"
+    },
+    {
+      "id": "claim-without-source",
+      "fires_on": "A financial claim ($ figure, %, MRR/ARR/burn/runway/CAC/LTV/NRR/churn/margin) on a line with no source tag",
+      "requires": "A source tag on the line: (source, date) or 'as of …' or 'per …'",
+      "severity": "block-if-strict (sonnet/deepseek), warn-if-lenient (opus)"
+    },
+    {
+      "id": "escalate-domain",
+      "fires_on": "Mentions M&A / equity dilution / cap table / stock option grant / tax strategy",
+      "requires": "VERDICT: escalate (no reasoning override — licensed-professional territory)",
+      "severity": "block-all-profiles"
+    }
+  ],
+  "verdict_format": {
+    "VERDICT": "refuse | conditional | escalate",
+    "TRIPWIRE": "which rule fired",
+    "GROUNDS": "numbers consulted — source + date",
+    "FLIPS_IF": "the specific evidence or condition that would change this verdict"
+  },
+  "notes": "Heuristic detection. False positives are acceptable: the fix is to add the verdict/source, which the loop should produce anyway. Never asks the model to 'show its thinking' (REFUSALS.md reasoning_extraction)."
+}

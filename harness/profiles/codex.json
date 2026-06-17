@@ -1,0 +1,14 @@
+{
+  "name": "codex",
+  "model": "openai/gpt-5.5",
+  "role": "agentic execution (GPT-5.5 via Codex)",
+  "compensates_weakness": "confidently wrong — does not flag its own uncertainty",
+  "gate": { "strictness": "strict" },
+  "dials": {
+    "spec": "outcome-first (goal, success criteria, evidence rules, output shape) — not rigid step-by-step",
+    "evidence": "every claim source-linked; it won't self-flag, so the gate does",
+    "abstain": "if unknown, output UNKNOWN"
+  },
+  "verify": { "by": "opus", "model": "anthropic/claude-opus-4-8" },
+  "distribution": "Codex has no PreToolUse hook — enforced at worktree-accept (harness/adapters/codex/accept-gate.sh)"
+}

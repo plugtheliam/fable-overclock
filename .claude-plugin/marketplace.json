@@ -1,0 +1,16 @@
+{
+  "name": "plugtheliam",
+  "owner": { "name": "plugtheliam" },
+  "metadata": {
+    "description": "Run Sonnet and DeepSeek at Fable-grade — a per-model reliability harness for Claude Code.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "fable-overclock",
+      "source": "./",
+      "description": "Per-model reliability harness: makes the model you run (Opus/Sonnet/DeepSeek) cite every figure, abstain instead of inventing, and cross-check with a second model. Ships a skill + an optional deterministic PreToolUse gate. stdlib-only, non-blocking.",
+      "category": "workflow"
+    }
+  ]
+}

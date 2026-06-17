@@ -1,0 +1,27 @@
+{
+  "comment": "Plugin hooks (auto-loaded by Claude Code when installed via /plugin). PreToolUse = the reliability gate on file writes. UserPromptSubmit = the `foc on/off/status` toggle. ${CLAUDE_PLUGIN_ROOT} is provided by Claude Code. The same hooks are wired by harness/install.sh for the manual install path.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/harness/gate/spec_gate.py\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/harness/gate/toggle.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

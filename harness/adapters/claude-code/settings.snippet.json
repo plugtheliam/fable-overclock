@@ -1,0 +1,27 @@
+{
+  "comment": "Merged into .claude/settings.json by harness/install.sh. PreToolUse = the reliability gate on file-writing tools. UserPromptSubmit = the `foc on/off/status` toggle. $CLAUDE_PROJECT_DIR is provided by Claude Code.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/harness/gate/spec_gate.py\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/harness/gate/toggle.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

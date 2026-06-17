@@ -1,0 +1,19 @@
+{
+  "pack": "reliability",
+  "purpose": "General output-reliability rules — domain-agnostic. The gate flags; your model still reasons and produces the fix. Tripwires, not verdicts.",
+  "tripwires": [
+    {
+      "id": "claim-without-source",
+      "fires_on": "A factual claim with a figure (a $ amount, %, or named metric) on a line with no source",
+      "requires": "An inline source tag — (source, date) / as of … / a date — or omit the number",
+      "severity": "block-if-strict (sonnet/deepseek/codex), warn-if-lenient (opus)"
+    },
+    {
+      "id": "fabrication",
+      "fires_on": "A number/fact not supported by the provided source (caught by the cross-model verifier, not regex)",
+      "requires": "Trace every figure to source, or write UNKNOWN",
+      "severity": "verifier (gate/verify.py)"
+    }
+  ],
+  "notes": "This is the default, general pack. Domain packs (e.g. rules/cfo.json — block a spend with no reasoned verdict) layer on top when your content is in that domain. Never asks the model to 'show its thinking' (reasoning_extraction-safe): it checks for grounds, not chain-of-thought."
+}

@@ -1,0 +1,53 @@
+# Harness install target (per-user; created by harness/install.sh)
+.claude/
+
+# Strategic / internal docs — vault only, never pushed
+# (matches against any directory level: root or nested in docs/, pieces/, etc.)
+STRATEGY-*.md
+POSITIONING-*.md
+ROADMAP-*.md
+COMPARISON-*.md
+COMPETITIVE-*.md
+INTERNAL-*.md
+GSTACK-COMPARISON.md
+DIFFERENTIATION-*.md
+WIP-*.md
+DRAFT-*.md
+
+# Common patterns also internal
+*.internal.md
+*.draft.md
+*.wip.md
+*.strategy.md
+*.positioning.md
+.notes/
+notes/
+strategy/
+positioning/
+roadmap/
+internal/
+
+# Editor / system
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python cache (in case anyone runs generators locally)
+__pycache__/
+*.pyc
+
+# Local config
+.env
+.env.local
+*.local
+
+# Build artifacts (no build step yet, but pre-emptive)
+node_modules/
+dist/
+build/
+
+# Gate on/off state (per-machine / per-project)
+.myinc/
