@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## Run Opus, Sonnet, and DeepSeek at Fable-grade.
-### Get Fable-grade output from the model you can still run.
+## Reliable output from the coding model you already use.
+### Make every model earn your trust.
 
 Sonnet and DeepSeek make up numbers and skip the check. Opus over-builds and drifts past what
 you asked. fable-overclock fixes the *behavior*, not the model: the cheap models cite every
@@ -45,14 +45,16 @@ output itself (no LLM judge) and catches any unsourced or made-up number before 
 payoff: output you don't have to fact-check line by line. Full walkthrough in
 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md).
 
-## Why now
+## Why this exists
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-In June 2026, US export controls cut off Anthropic's Fable 5 and Mythos 5 for every foreign
-national. If you're a non-US developer, the frontier model vanished from your stack overnight.
-You can't get it back. So make the model you're left with do frontier-grade work — measured, not
-hoped.
-<!-- FABLE-MOMENT:end -->
+The most expensive model failure is often not a benchmark miss. It is a plausible number with no
+source, an API that never existed, or an implementation that quietly exceeds the request. Better
+models reduce these failures; they do not remove the need for a reproducible operating contract
+and a deterministic backstop.
+
+fable-overclock was first built during the brief June 2026 Fable access interruption. Access has
+since been restored. The tool remains useful because reliability should travel with your workflow
+rather than depend on one model or one release cycle.
 
 ## See it for yourself
 
@@ -157,8 +159,8 @@ on trust; run `harness/tests/bench.py` on your own model.
 
 ## Built in public
 
-By a non-US founder who lost Fable to export controls and builds reliability tools for the
-models the rest of us can still run. Follow along on X: [@liampluglab](https://x.com/liampluglab).
+By a hands-on Founding CTO and Founding Engineer building reliability tools for production AI
+workflows. Follow along on X: [@liampluglab](https://x.com/liampluglab).
 A managed version lives at [myinc.app](https://myinc.app). Part of the **myinc-os** toolkit.
 
 ## License

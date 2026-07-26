@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## Opus も Sonnet も DeepSeek も、Fable 級で走らせる。
-### いま手元で動くモデルから Fable 級の出力を引き出す。
+## いま使っているコーディングモデルから、信頼できる出力を。
+### どのモデルにも、結果で信頼を証明させる。
 
 Sonnet も DeepSeek も数字を勝手にでっち上げ、
 確認を飛ばす。Opus は作り込みすぎて、頼んだ範囲を踏み越えていく。fable-overclock が直すのは
@@ -41,13 +41,15 @@ fable-overclock はそれぞれの癖を知り尽くして、封じ込める。�
 すべて捕まえる。見返りは、一行ずつファクトチェックしなくていい出力だ。詳しい解説は
 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md) に。
 
-## なぜ、いまなのか
+## なぜ必要なのか
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-2026年6月、米国の輸出規制が Anthropic の Fable 5 と Mythos 5 をすべての外国人から遮断した。
-あなたが米国外の開発者なら、フロンティアモデルは一夜にしてスタックから消えた。取り戻すことはできない
-——なら、手元に残ったモデルにフロンティア級の仕事をさせればいい。願望ではなく、実測で。
-<!-- FABLE-MOMENT:end -->
+最も高くつくモデルの失敗は、ベンチマークの点数ではない。出典のないもっともらしい数字、存在しない
+API、あるいは依頼の範囲を静かに超えた実装だ。より良いモデルはこうした失敗を減らすが、再現可能な
+運用契約と決定論的な安全網の必要性まではなくさない。
+
+fable-overclock は、2026年6月の短い Fable アクセス停止をきっかけに作られた。アクセスは
+その後復旧した。それでも、信頼性は一つのモデルやリリース周期ではなくワークフローと共に持ち運べる
+べきだから、このツールには今も意味がある。
 
 ## 自分の目で確かめる
 
@@ -148,8 +150,8 @@ foc off all    # machine-wide (add `all` to any command)
 
 ## 公開の場で作っている
 
-輸出規制で Fable を失った米国外のファウンダーが、残された私たちが回せるモデルのための信頼性ツールを
-作っている。X でフォローを:[@liampluglab](https://x.com/liampluglab)。マネージド版は
+プロダクション AI ワークフロー向けの信頼性ツールを作る、hands-on の Founding CTO 兼
+Founding Engineer が公開開発している。X でフォローを:[@liampluglab](https://x.com/liampluglab)。マネージド版は
 [myinc.app](https://myinc.app) に。**myinc-os** ツールキットの一部。
 
 ## ライセンス

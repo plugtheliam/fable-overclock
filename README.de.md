@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## Lass Opus, Sonnet und DeepSeek auf Fable-Niveau laufen.
-### Hol dir Fable-Output aus dem Modell, das dir bleibt.
+## Verlässliche Ergebnisse aus dem Coding-Modell, das du bereits nutzt.
+### Lass jedes Modell dein Vertrauen verdienen.
 
 Sonnet und DeepSeek erfinden
 Zahlen und überspringen die Prüfung. Opus baut zu viel und treibt am Auftrag vorbei.
@@ -45,14 +45,16 @@ Sicherheitsnetz — es bewertet die Ausgabe selbst (kein LLM-Judge) und fängt j
 Output, den du nicht Zeile für Zeile faktenchecken musst. Komplette Tour in
 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md).
 
-## Warum gerade jetzt
+## Warum es das gibt
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-Im Juni 2026 kappten US-Exportkontrollen Anthropics Fable 5 und Mythos 5 für jeden ausländischen
-Staatsbürger. Wenn du als Entwickler außerhalb der USA arbeitest, ist das Frontier-Modell über
-Nacht aus deinem Stack verschwunden. Du kannst es nicht zurückbekommen. Also bring das Modell, das dir
-bleibt, dazu, Frontier-Arbeit zu leisten — gemessen, nicht erhofft.
-<!-- FABLE-MOMENT:end -->
+Der teuerste Modellfehler ist oft kein schlechter Benchmark-Wert. Es ist eine plausible Zahl ohne
+Quelle, eine API, die nie existiert hat, oder eine Implementierung, die den Auftrag still
+überschreitet. Bessere Modelle reduzieren solche Fehler, beseitigen aber nicht die Notwendigkeit
+eines reproduzierbaren Arbeitsvertrags und eines deterministischen Sicherheitsnetzes.
+
+fable-overclock entstand während der kurzen Fable-Zugangsunterbrechung im Juni 2026. Der Zugang
+wurde später wiederhergestellt. Das Werkzeug bleibt nützlich, weil Zuverlässigkeit mit dem
+Workflow reisen sollte, statt von einem Modell oder Release-Zyklus abzuhängen.
 
 ## Sieh es dir selbst an
 
@@ -158,8 +160,8 @@ laufen.
 
 ## In der Öffentlichkeit gebaut
 
-Von einem Gründer außerhalb der USA, der Fable an Exportkontrollen verloren hat und
-Zuverlässigkeits-Tools für die Modelle baut, die uns anderen bleiben. Folge mit auf X:
+Von einem Founding CTO und Founding Engineer, der selbst Zuverlässigkeits-Tools für produktive
+AI-Workflows baut. Folge mit auf X:
 [@liampluglab](https://x.com/liampluglab). Eine gehostete Version gibt es unter
 [myinc.app](https://myinc.app). Teil des **myinc-os**-Toolkits.
 

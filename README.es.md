@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## Haz que Opus, Sonnet y DeepSeek rindan a nivel Fable.
-### Saca salida de nivel Fable del modelo que aún puedes ejecutar.
+## Obtén resultados fiables del modelo de código que ya usas.
+### Haz que cada modelo se gane tu confianza.
 
 Sonnet y DeepSeek se inventan las cifras y se saltan la verificación. Opus sobre-construye y se
 aleja de lo que le pediste. fable-overclock arregla el *comportamiento*, no el modelo: los modelos
@@ -45,14 +45,16 @@ puntúa la salida ella misma (sin juez LLM) y atrapa cualquier número sin fuent
 tienes que verificar línea por línea. Recorrido completo en
 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md).
 
-## Por qué ahora
+## Por qué existe
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-En junio de 2026, los controles de exportación de EE. UU. cortaron el acceso a Fable 5 y Mythos 5
-de Anthropic para todo extranjero. Si eres un desarrollador fuera de EE. UU., el modelo de
-frontera desapareció de tu stack de la noche a la mañana. No puedes recuperarlo. Así que haz que
-el modelo que te queda haga trabajo de nivel frontera — medido, no esperado.
-<!-- FABLE-MOMENT:end -->
+El fallo más costoso de un modelo no suele ser una mala puntuación en un benchmark. Es una cifra
+plausible sin fuente, una API que nunca existió o una implementación que supera silenciosamente
+lo pedido. Los mejores modelos reducen estos fallos, pero no eliminan la necesidad de un contrato
+operativo reproducible y una protección determinista.
+
+fable-overclock nació durante la breve interrupción de acceso a Fable en junio de 2026. El acceso
+se restableció después. La herramienta sigue siendo útil porque la fiabilidad debe viajar con tu
+flujo de trabajo, no depender de un solo modelo o ciclo de lanzamiento.
 
 ## Compruébalo tú mismo
 
@@ -157,8 +159,8 @@ fuente y deja que el verificador haga el resto. No te fíes de las cifras a cieg
 
 ## Construido en público
 
-Por un fundador fuera de EE. UU. que perdió Fable por los controles de exportación y construye
-herramientas de fiabilidad para los modelos que los demás aún podemos ejecutar. Sígueme en X:
+Por un Founding CTO y Founding Engineer que construye directamente herramientas de fiabilidad
+para flujos de trabajo de IA en producción. Sígueme en X:
 [@liampluglab](https://x.com/liampluglab). Hay una versión gestionada en
 [myinc.app](https://myinc.app). Parte del kit **myinc-os**.
 

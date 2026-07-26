@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## 让 Opus、Sonnet 和 DeepSeek 跑出 Fable 级的水准。
-### 用你还能跑的模型，榨出 Fable 级的输出。
+## 让你已经在用的编码模型输出可靠结果。
+### 让每个模型都用结果赢得信任。
 
 Sonnet 和 DeepSeek 张口就编数字，懒得回头核对；Opus
 则爱过度发挥，越做越偏离你的本意。fable-overclock 治的不是模型，而是这股*行为*：便宜的模型每个数字
@@ -40,13 +40,14 @@ Sonnet 和 DeepSeek 张口就编数字，懒得回头核对；Opus
 确定性的**关卡**则是最后防线 —— 评分由它自己完成（没有 LLM 裁判），任何无出处或凭空捏造的数字，落地之前都会被它逮住。回报很
 实在：输出不必再逐行去核实。完整讲解见 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md)。
 
-## 为什么是现在
+## 为什么需要它
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-2026 年 6 月，美国出口管制切断了 Anthropic 的 Fable 5 与 Mythos 5 对所有外国国民的供应。
-如果你是非美国开发者，一夜之间，最前沿的模型就从你的技术栈里消失了。你拿不回来 —— 那就让手里
-还剩的这个模型，做出前沿级的活儿 —— 靠测量，而不是指望。
-<!-- FABLE-MOMENT:end -->
+代价最高的模型失败，往往不是基准分数不够高，而是一个没有来源却看似可信的数字、一个根本不存在的
+API，或一份悄悄超出需求范围的实现。更好的模型会减少这些问题，但不会消除对可复现操作契约和确定性
+安全网的需要。
+
+fable-overclock 最初诞生于 2026 年 6 月短暂的 Fable 访问中断期间。访问后来已经恢复，但可靠性
+应该随工作流迁移，而不应依赖某一个模型或发布周期，因此这个工具仍然有价值。
 
 ## 亲眼看看
 
@@ -144,8 +145,8 @@ Claude Code 里，一条命令装好，还按模型逐一调校。
 
 ## 公开构建
 
-作者是一位非美国创始人，因出口管制痛失 Fable，转而为我们其余人还跑得动的那些模型打造可靠性
-工具。来 X 围观：[@liampluglab](https://x.com/liampluglab)。托管版见
+作者是一位亲自构建生产级 AI 工作流可靠性工具的 Founding CTO 和 Founding Engineer。
+来 X 围观：[@liampluglab](https://x.com/liampluglab)。托管版见
 [myinc.app](https://myinc.app)。属于 **myinc-os** 工具包的一部分。
 
 ## 许可证

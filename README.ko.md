@@ -4,8 +4,8 @@
 
 # fable-overclock
 
-## Opus와 Sonnet, DeepSeek을 Fable급으로 돌려라.
-### 아직 돌릴 수 있는 모델에서 Fable급 결과물을 뽑아낸다.
+## 지금 쓰는 코딩 모델에서 신뢰할 수 있는 결과를 얻어라.
+### 모든 모델이 결과로 신뢰를 증명하게 한다.
 
 Sonnet과 DeepSeek은 숫자를 지어내고 검증을 건너뛴다. Opus는 시키지도 않은 일을 과하게 벌이고
 요청 범위를 한참 넘어선다. fable-overclock이 손보는 건 모델이 아니라 그 *행동*이다. 값싼 모델은
@@ -45,13 +45,15 @@ Sonnet과 DeepSeek은 숫자를 지어내고 검증을 건너뛴다. Opus는 시
 결과물. 전체 동작은
 [`docs/HOW-IT-WORKS.md`](docs/HOW-IT-WORKS.md).
 
-## 왜 지금인가
+## 왜 필요한가
 
-<!-- FABLE-MOMENT:start — time-bound. Remove when Fable access is restored to non-US founders. -->
-2026년 6월, 미국 수출 규제가 모든 외국 국적자에게서 Anthropic의 Fable 5와 Mythos 5를
-끊어버렸다. 미국 밖 개발자라면, 프런티어 모델이 하룻밤 사이 스택에서 사라진 셈이다. 되찾을 길은
-없다. 그러니 남은 모델로 프런티어급 결과물을 뽑아내게 만들어라 — 바람이 아니라 측정으로.
-<!-- FABLE-MOMENT:end -->
+가장 비싼 모델 실패는 벤치마크 점수가 낮은 것이 아니라, 출처 없는 그럴듯한 숫자나 존재하지 않는
+API, 요청 범위를 조용히 넘어선 구현이다. 더 좋은 모델은 이런 실패를 줄이지만, 재현 가능한 운영
+계약과 결정론적 안전장치의 필요성을 없애지는 못한다.
+
+fable-overclock은 2026년 6월의 짧은 Fable 접근 중단 시기에 처음 만들어졌다. 접근은 이후
+복구됐지만, 신뢰성은 특정 모델이나 릴리스 주기가 아니라 작업 흐름과 함께 이동해야 하므로 이 도구는
+여전히 유효하다.
 
 ## 직접 확인해봐라
 
@@ -153,8 +155,8 @@ foc off all    # 머신 전체 (아무 명령에나 `all` 추가)
 
 ## 공개적으로 만든다
 
-수출 규제로 Fable을 잃은 미국 밖의 한 창업가가, 우리처럼 여전히 돌릴 수 있는 모델을 위한 신뢰성
-도구를 만든다. X에서 따라와라: [@liampluglab](https://x.com/liampluglab). 매니지드 버전은
+프로덕션 AI 워크플로를 위한 신뢰성 도구를 만드는 hands-on Founding CTO이자 Founding
+Engineer가 공개적으로 개발한다. X에서 따라와라: [@liampluglab](https://x.com/liampluglab). 매니지드 버전은
 [myinc.app](https://myinc.app)에 있다. **myinc-os** 툴킷의 일부다.
 
 ## 라이선스
